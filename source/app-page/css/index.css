@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft Jhenghei', Lantinghei SC, 'lanting', PingFang SC, Seguo UI, Microsoft Yahei, Arial;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 740px;
+    margin: 0 auto;
+}
+.back{
+    margin-bottom: 32px;
+}
+.back img{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title-c {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 20px;
+}
+
+.app-name {
+    color: #333;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0;
+}
+.dark-theme .app-name {
+    color: #a9a9b3;
+}
+.app-package {
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+    margin: 3px 0 0 !important;
+
+}
+
+.icon img {
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+}
+
+.download-btn {
+    padding: 0 6px;
+    display: inline-block;
+    width: 120px;
+    height: 34px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: #4caf50;
+    margin-top: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.qrcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qrcode img {
+    width: 82px;
+    height: 82px;
+}
+
+.qrcode span {
+    font-size: 12px;
+    color: #999;
+}
+
+.screen-shot {
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    margin-top: 16px;
+}
+
+.sub-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.app-image {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 5px;
+    margin-bottom: 16px;
+}
+
+.app-image img {
+    width: 168px;
+    height: auto;
+    margin-right: 16px;
+    box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+}
+.dark-theme .description {
+    color: #a9a9b3;
+}
+.description p {
+    margin-bottom: 16px;
+}
+
+/*preview image*/
+.preview {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    z-index: 999;
+    background: #000000;
+    cursor: pointer;
+}
+
+.preview-img {
+    height: 100vh;
+    width: auto;
+}
+
+.prev-ic, .next-ic {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    opacity: .5;
+    z-index: 1000;
+}
+
+.prev-ic {
+    left: 32px;
+}
+
+.next-ic {
+    right: 32px;
+}
