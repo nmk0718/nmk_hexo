@@ -3,9 +3,13 @@ navname: nimingkun's Blog
 
 # navigatior items
 nav:
-  App: /app
+  
   Posts: /archives
 #  Category: /category
+  App: /app
+  Map: /map
+  Game: /game
+  Media: /media
   Tags: /tag
   About: /about
 

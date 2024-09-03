@@ -1,0 +1,80 @@
+<html>
+	<head>
+                <meta charset="UTF-8">
+
+		<!--引入jQuery框架-->
+		<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+		<!--引入jVectorMap库-->
+		<script type="text/javascript" src="/js/jquery-jvectormap-1.2.2.min.js"></script>
+		<!--引入样式表-->
+		<link href="/js/jquery-jvectormap-1.2.2.css" rel="stylesheet" media="screen">
+
+
+		<!--引入中国地图数据库-->
+		<script type="text/javascript" src="/js/jquery-jvectormap-cn-merc-en.js"></script>
+
+	</head>
+<body>
+	<!--background-color: 地图背景颜色 -->
+	<div id="map" > </div>
+	<script>
+		$('#map').vectorMap({
+
+			map: 'cn_merc_en',   // 中国地图
+			backgroundColor: 'transparent',
+			zoomOnScroll:false,//禁用缩放
+			//zoomMin: 0.9, // 鼠标缩放时的最小比例
+			//zoomMax: 2.4, // 鼠标缩放时的最大比例
+			focusOn: {
+				x: 0.55,
+				y: 2,
+				scale: 0.9
+			},
+			regionStyle: {
+				initial: {
+					fill: '#F0E6D2',   // 地图颜色
+					"fill-opacity": 1, // 省份（州）是否隐藏，鼠标滑动时显示; 1：显示，2：隐藏。
+					stroke: 'none',
+					"stroke-width": 0,
+					"stroke-opacity": 1
+				},
+				hover: {
+					fill: '#c9dfaf',  // 鼠标滑动至某省份的高亮颜色。
+					"fill-opacity": 0.8
+				},
+			},
+			markerStyle: {
+		        initial: {
+		            fill: '#fd8888', // 足迹位置的填充颜色
+		            stroke: '#fff'   // 足迹位置的描边颜色
+		        },
+				hover: {
+					fill: '#fd2020', // 鼠标滑动至足迹位置后的填充颜色
+					stroke: '#fff',  // 鼠标滑动至足迹位置后的描边颜色
+					"fill-opacity": 0.8
+				},
+		    },
+			markers: [ // 足迹位置
+
+				// {latLng: [经度（保留两位小数）, 纬度（保留两位小数）], name: '城市名称'},
+				// 查询经纬度网站
+
+		        {latLng: [39.91, 116.47], name: '北京'},
+		        {latLng: [31.17, 121.45], name: '上海'},
+		        {latLng: [23.17, 113.26], name: '广州'},
+				{latLng: [34.78, 113.68], name: '郑州'},
+				{latLng: [32.14, 114.09], name: '信阳'},
+				{latLng: [31.31, 120.58], name: '苏州'},
+				{latLng: [30.24, 120.20], name: '杭州'},
+				{latLng: [23.11, 114.41], name: '惠州'},
+				{latLng: [24.87, 118.67], name: '泉州'},
+				{latLng: [24.63, 118.07], name: '厦门'},
+				{latLng: [22.39, 114.10], name: '香港'},
+				{latLng: [26.89, 112.57], name: '衡阳'},
+				{latLng: [23.02, 113.12], name: '佛山'},
+				{latLng: [22.57, 113.08], name: '江门'},
+				{latLng: [23.68, 113.05], name: '清远'}
+		    ]
+		});
+	</script>
+</html>
