@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+
+<head>
+    <meta name="generator" content="Hexo 3.9.0">
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
 
-<title>Game | K&#39;s Blog</title>
+    <title>About | K&#39;s Blog</title>
+
+
+
+
 
 
 
@@ -17,380 +24,693 @@
 
 
     <!-- stylesheets list from _config.yml -->
-    
+
     <link rel="stylesheet" href="/css/style.css">
 
 
 
+
     <!-- scripts list from _config.yml -->
-    
+
     <script src="/js/script.js"></script>
-    
+
     <script src="/js/tocbot.min.js"></script>
-    
 
 
-
-    
-    
-        
-    
 
 
 </head>
-<body style="line-height: 1em;">
+
+<body">
     <div class="wrapper">
         <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">nimingkun&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/app">App</a>
-                
-                    <a class="menu-item" href="/game">Game</a>
-                
-                    <a class="menu-item" href="/media">Media</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-header header-logo"><a href="/">nimingkun&#39;s Blog</a></div>
+                    <div class="menu navbar-right">
 
-        </div>
-    </nav>
+                        <a class="menu-item" href="/archives">Posts</a>
 
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">nimingkun&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                        <a class="menu-item" href="/app">App</a>
+
+                        <a class="menu-item" href="/map">Map</a>
+
+                        <a class="menu-item" href="/game">Game</a>
+
+                        <a class="menu-item" href="/media">Media</a>
+
+                        <a class="menu-item" href="/tag">Tags</a>
+
+                        <a class="menu-item" href="/about">About</a>
+
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+                    </div>
+
                 </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/app">App</a>
-                
-                    <a class="menu-item" href="/game">Game</a>
-                
-                    <a class="menu-item" href="/media">Media</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
-    <style>
-        .item {
-            display: flex;
-            align-items: center;
-            border-top: 0.5px solid #ccc; /* 添加上边框 */
-            padding: 20px 0; /* 调整内边距，使上下边框间距一致 */
-        }
-        .bold-text {
-        font-weight: bold;
-        }
-        .item img {
-            max-width: 200px;
-            max-height: 400px;
-            margin-right: 30px;
-        }
-        .item-content {
-            flex: 1;
-        }
+            </nav>
 
-        .playtime {
-            padding: 10px;
-            border-radius: 5px;
-        }
-        </style>
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
+            <nav class="navbar-mobile" id="nav-mobile">
+                <div class="container">
+                    <div class="navbar-header">
+                        <div>
+                            <a href="/">nimingkun&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                        </div>
+                        <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+                    </div>
+                    <div class="menu" id="mobile-menu">
+
+                        <a class="menu-item" href="/archives">Posts</a>
+
+                        <a class="menu-item" href="/app">App</a>
+
+                        <a class="menu-item" href="/map">Map</a>
+
+                        <a class="menu-item" href="/game">Game</a>
+
+                        <a class="menu-item" href="/media">Media</a>
+
+                        <a class="menu-item" href="/tag">Tags</a>
+
+                        <a class="menu-item" href="/about">About</a>
+
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <script>
+            var mobileBtn = function f() {
+                var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+                var mobileMenu = document.getElementById("mobile-menu");
+                if (toggleMenu.classList.contains("active")) {
+                    toggleMenu.classList.remove("active")
+                    mobileMenu.classList.remove("active")
+                } else {
+                    toggleMenu.classList.add("active")
+                    mobileMenu.classList.add("active")
+                }
+            }
+        </script>
+
         <div class="main">
 
-<!--content-->
-<div class="container">
-        
-    <div class="post-toc">
-        <div class="tocbot-list">
-        </div>
-        <div class="tocbot-list-menu">
-            <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-            <a onclick="go_top()">Back to top</a>
-            <a onclick="go_bottom()">Go to bottom</a>
+            <!--content-->
+            <div class="container">
+
+                <div class="post-toc">
+                    <div class="tocbot-list">
+                    </div>
+                    <div class="tocbot-list-menu">
+                        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+                        <a onclick="go_top()">Back to top</a>
+                        <a onclick="go_bottom()">Go to bottom</a>
+                    </div>
+                </div>
+
+                <script>
+                    document.ready(
+                        function () {
+                            tocbot.init({
+                                tocSelector: '.tocbot-list',
+                                contentSelector: '.post-content',
+                                headingSelector: 'h1, h2, h3, h4, h5',
+                                collapseDepth: 1,
+                                orderedList: false,
+                                scrollSmooth: true,
+                            })
+                        }
+                    )
+
+                    function expand_toc() {
+                        var b = document.querySelector(".tocbot-toc-expand");
+                        tocbot.init({
+                            tocSelector: '.tocbot-list',
+                            contentSelector: '.post-content',
+                            headingSelector: 'h1, h2, h3, h4, h5',
+                            collapseDepth: 6,
+                            orderedList: false,
+                            scrollSmooth: true,
+                        });
+                        b.setAttribute("onclick", "collapse_toc()");
+                        b.innerHTML = "Collapse all"
+                    }
+
+                    function collapse_toc() {
+                        var b = document.querySelector(".tocbot-toc-expand");
+                        tocbot.init({
+                            tocSelector: '.tocbot-list',
+                            contentSelector: '.post-content',
+                            headingSelector: 'h1, h2, h3, h4, h5',
+                            collapseDepth: 1,
+                            orderedList: false,
+                            scrollSmooth: true,
+                        });
+                        b.setAttribute("onclick", "expand_toc()");
+                        b.innerHTML = "Expand all"
+                    }
+
+                    function go_top() {
+                        window.scrollTo(0, 0);
+                    }
+
+                    function go_bottom() {
+                        window.scrollTo(0, document.body.scrollHeight);
+                    }
+
+                </script>
+
+                <article class="post-wrap page">
+                    <h2 class="post-title">My Games</h2>
+                    <div class="post-content">
+                        <h3 id="塞尔达传说"><a href="#塞尔达传说" class="headerlink" title="塞尔达传说"></a>塞尔达传说</h3>
+                        <div class="item">
+                            <img src="../image/Breath-of-the-Wild.png" alt="">
+                            <div class="item-content">
+                                <h4 id="塞尔达传说·旷野之息"><a href="#塞尔达传说·旷野之息" class="headerlink"
+                                        title="塞尔达传说·旷野之息"></a>塞尔达传说·旷野之息</h4>
+                                <p>类型：动作冒险</p>
+                                <p>开发商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>96小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/SkywardSword.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="塞尔达传说·御天之剑HD"><a href="#塞尔达传说·御天之剑HD" class="headerlink"
+                                        title="塞尔达传说·御天之剑HD"></a>塞尔达传说·御天之剑HD</h4>
+                                <p>类型：动作冒险</p>
+                                <p>开��商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>53小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Link's-Awakening.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="塞尔达传说·织梦岛"><a href="#塞尔达传说·织梦岛" class="headerlink"
+                                        title="塞尔达传说·织梦岛"></a>塞尔达传说·织梦岛</h4>
+                                <p>类型：动作冒险</p>
+                                <p>开发商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>19小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Tears-of-the-Kingdom.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="塞尔达传说·王国之泪"><a href="#塞尔达传说·王国之泪" class="headerlink"
+                                        title="塞尔达传说·王国之泪"></a>塞尔达传说·王国之泪</h4>
+                                <p>类型：动作冒险</p>
+                                <p>开发商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>7.5小时</p>
+                            </div>
+                        </div>
+
+
+                        <h3 id="怪物猎人"><a href="#怪物猎人" class="headerlink" title="怪物猎人"></a>怪物猎人</h3>
+                        <div class="item">
+                            <img src="../image/world.png" alt="">
+                            <div class="item-content">
+                                <h4 id="怪物猎人·世界"><a href="#怪物猎人·世界" class="headerlink" title="怪物猎人·世界"></a>怪物猎人·世界</h4>
+                                <p>类型：动作角色扮演</p>
+                                <p>开发商：卡普空</p>
+                                <p>游玩平台：Windows</p>
+                            </div>
+                            <div class="playtime">
+                                <p>319小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/rise.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="怪物猎人·崛起"><a href="#怪物猎人·崛起" class="headerlink" title="怪物猎人·崛起"></a>怪物猎人·崛起</h4>
+                                <p>类型：动作角色扮演</p>
+                                <p>开发商：卡普空</p>
+                                <p>游玩平台：Windows</p>
+                            </div>
+                            <div class="playtime">
+                                <p>230小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/gu.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="怪物猎人·GU"><a href="#怪物猎人·GU" class="headerlink" title="怪物猎人·GU"></a>怪物猎人·GU</h4>
+                                <p>类型：动作角色扮演</p>
+                                <p>开发商：卡普空</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>28分钟</p>
+                            </div>
+                        </div>
+
+
+                        <h3 id="马力欧"><a href="#马力欧" class="headerlink" title="马力欧"></a>马力欧</h3>
+                        <div class="item">
+                            <img src="../image/mario-u.png" alt="">
+                            <div class="item-content">
+                                <h4 id="新超级马力欧兄弟U·豪华版"><a href="#新超级马力欧兄弟U·豪华版" class="headerlink"
+                                        title="新超级马力欧兄弟U·豪华版"></a>新超级马力欧兄弟U·豪华版</h4>
+                                <p>类型：2D平台动作</p>
+                                <p>开发商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>15小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/mario-party.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="超级马力欧派对"><a href="#超级马力欧派对" class="headerlink" title="超级马力欧派对"></a>超级马力欧派对</h4>
+                                <p>类型：聚会、多人</p>
+                                <p>开发商：NDcube</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>5小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/mario-kart.png" alt="">
+                            <div class="item-content">
+                                <h4 id="马力欧卡丁车8·豪华版"><a href="#马力欧卡丁车8·豪华版" class="headerlink"
+                                        title="马力欧卡丁车8·豪华版"></a>马力欧卡丁车8·豪华版</h4>
+                                <p>类型：赛车</p>
+                                <p>开发商：任天堂企划制作本部</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>12小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/mario-odyssey.png" alt="">
+                            <div class="item-content">
+                                <h4 id="超级马力欧·奥德赛"><a href="#超级马力欧·奥德赛" class="headerlink"
+                                        title="超级马力欧·奥德赛"></a>超级马力欧·奥德赛</h4>
+                                <p>类型：3D平台动作冒险</p>
+                                <p>开发商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>21小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/mario-rpg.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="超级马力欧RPG"><a href="#超级马力欧RPG" class="headerlink" title="超级马力欧RPG"></a>超级马力欧RPG
+                                </h4>
+                                <p>类型：动作RPG</p>
+                                <p>开发商：Square（现Square Enix）</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>38分钟</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/mario-paper.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="纸片马力欧·折纸国王"><a href="#纸片马力欧·折纸国王" class="headerlink"
+                                        title="纸片马力欧·折纸国王"></a>纸片马力欧·折纸国王</h4>
+                                <p>类型：动作冒险</p>
+                                <p>开发商：Intelligent Systems</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>45分钟</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/mario-rabbids.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="马力欧疯狂兔子·王国之战"><a href="#马力欧疯狂兔子·王国之战" class="headerlink"
+                                        title="马力欧疯狂兔子·王国之战"></a>马力欧疯狂兔子·王国之战</h4>
+                                <p>类型：回合制策略</p>
+                                <p>开发商：育碧</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>33分钟</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/mario-wonder.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="超级马力欧兄弟·惊奇"><a href="#超级马力欧兄弟·惊奇" class="headerlink"
+                                        title="超级马力欧兄弟·惊奇"></a>超级马力欧兄弟·惊奇</h4>
+                                <p>类型：2D平台动作</p>
+                                <p>开发商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>33分钟</p>
+                            </div>
+                        </div>
+
+                        <h3 id="星之卡比"><a href="#星之卡比" class="headerlink" title="星之卡比"></a>星之卡比</h3>
+                        <div class="item">
+                            <img src="../image/Return-to-Dream-Land-DELUXE.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="星之卡比Wii·豪华版"><a href="#星之卡比Wii·豪华版" class="headerlink"
+                                        title="星之卡比Wii·豪华版"></a>星之卡比Wii·豪华版</h4>
+                                <p>类型：平台动作</p>
+                                <p>开发商：HAL研究所</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>1.5小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Forgotten-Land.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="星之卡比·探索发现"><a href="#星之卡比·探索发现" class="headerlink"
+                                        title="星之卡比·探索发现"></a>星之卡比·探索发现</h4>
+                                <p>类型：3D平台动作冒险</p>
+                                <p>开发商：HAL研究所</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>14.5小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Star-Allies.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="星之卡比·新星同盟"><a href="#星之卡比·新星同盟" class="headerlink"
+                                        title="星之卡比·新星同盟"></a>星之卡比·新星同盟</h4>
+                                <p>类型：平台动作</p>
+                                <p>开发商：HAL研究所</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>2小时</p>
+                            </div>
+                        </div>
+
+
+                        <h3 id="瓦力欧"><a href="#瓦力欧" class="headerlink" title="瓦力欧"></a>瓦力欧</h3>
+                        <div class="item">
+                            <img src="../image/Move-It.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="超级舞动·瓦力欧制造"><a href="#超级舞动·瓦力欧制造" class="headerlink"
+                                        title="超级舞动·瓦力欧制造"></a>超级舞动·瓦力欧制造</h4>
+                                <p>类型：派对、小游戏合集</p>
+                                <p>开发商：Intelligent Systems</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>2小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/Get-it-Together.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="分享同乐·瓦力欧制造"><a href="#分享同乐·瓦力欧制造" class="headerlink"
+                                        title="分享同乐·瓦力欧制造"></a>分享同乐·瓦力欧制造</h4>
+                                <p>类型：动作、派对、小游戏合集</p>
+                                <p>开发商：Intelligent Systems</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>2小时</p>
+                            </div>
+                        </div>
+
+                        <h3 id="体感游戏"><a href="#体感游戏" class="headerlink" title="体感游戏"></a>体感游戏</h3>
+                        <div class="item">
+                            <img src="../image/Ring-Fit-Adventure.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="健身环大冒险"><a href="#健身环大冒险" class="headerlink" title="健身环大冒险"></a>健身环大冒险</h4>
+                                <p>类型：健身、角色扮演</p>
+                                <p>开发商：任天堂企划制作本部</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>8小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/just-dance2019.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="舞力全开2019"><a href="#舞力全开2019" class="headerlink" title="舞力全开2019"></a>舞力全开2019
+                                </h4>
+                                <p>类型：音乐、舞蹈</p>
+                                <p>开发商：Ubisoft Paris、Ubisoft Milan</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>9.5小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/Fitness-Boxing2.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="健身拳击2"><a href="#健身拳击2" class="headerlink" title="健身拳击2"></a>健身拳击2</h4>
+                                <p>类型：体育、健身</p>
+                                <p>开发商：Imagineer</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>6.5小时</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../image/switch-sports.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="Nintendo-switch-sports"><a href="#Nintendo-switch-sports" class="headerlink"
+                                        title="Nintendo switch sports"></a>Nintendo switch sports</h4>
+                                <p>类型：体育、派对游戏</p>
+                                <p>开发商：任天堂企划制作本部</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>2小时</p>
+                            </div>
+                        </div>
+
+                        <h3 id="其他游戏"><a href="#其他游戏" class="headerlink" title="其他游戏"></a>其他游戏</h3>
+                        <div class="item">
+                            <img src="../image/mario-u.png" alt="">
+                            <div class="item-content">
+                                <h4 id="黑神话·悟空"><a href="#黑神话·悟空" class="headerlink" title="黑神话·悟空"></a>黑神话·悟空</h4>
+                                <p>类型：动作角色扮演</p>
+                                <p>开发商：游戏科学</p>
+                                <p>游玩平台：Windows、PlayStation 5</p>
+                            </div>
+                            <div class="playtime">
+                                <p>12小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/mario-u.png" alt="">
+                            <div class="item-content">
+                                <h4 id="warframe"><a href="#warframe" class="headerlink" title="warframe"></a>warframe
+                                </h4>
+                                <p>类型：第三人称射击、动作角色扮演</p>
+                                <p>开发商：Digital Extremes</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>19小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/mario-u.png" alt="">
+                            <div class="item-content">
+                                <h4 id="遗迹灰烬重生"><a href="#遗迹灰烬重生" class="headerlink" title="遗迹灰烬重生"></a>遗迹灰烬重生</h4>
+                                <p>类型：第三人称射击、动作角色扮演</p>
+                                <p>开发商：Gunfire Games</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>51小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/mario-u.png" alt="">
+                            <div class="item-content">
+                                <h4 id="Dungeonborne"><a href="#Dungeonborne" class="headerlink"
+                                        title="Dungeonborne"></a>Dungeonborne</h4>
+                                <p>类型：动作角色扮演、Roguelike</p>
+                                <p>开发商：Mithril Interactive</p>
+                                <p>游玩平台：Windows</p>
+                            </div>
+                            <div class="playtime">
+                                <p>4.5小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/mario-u.png" alt="">
+                            <div class="item-content">
+                                <h4 id="艾尔登法环"><a href="#艾尔登法环" class="headerlink" title="艾尔登法环"></a>艾尔登法环</h4>
+                                <p>类型：动作角色扮演</p>
+                                <p>开发商：FromSoftware</p>
+                                <p>游玩平台：Windows、PlayStation 4、PlayStation 5、Xbox One、Xbox Series X/S</p>
+                            </div>
+                            <div class="playtime">
+                                <p>3.5小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Witcher.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="巫师3狂猎"><a href="#巫师3狂猎" class="headerlink" title="巫师3狂猎"></a>巫师3狂猎</h4>
+                                <p>类型：动作角色扮演</p>
+                                <p>开发商：CD Projekt RED</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>5.7小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Riders-Republic.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="极限国度"><a href="#极限国度" class="headerlink" title="极限国度"></a>极限国度</h4>
+                                <p>类型：体育、极限运动</p>
+                                <p>开发商：Ubisoft Annecy</p>
+                                <p>游玩平台：Windows、PlayStation 4、PlayStation 5、Xbox One、Xbox Series X/S、Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>9小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/hades.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="哈迪斯"><a href="#哈迪斯" class="headerlink" title="哈迪斯"></a>哈迪斯</h4>
+                                <p>类型：动作角色扮演、Roguelike</p>
+                                <p>开发商：Supergiant Games</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>26小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Metroid-Dread.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="密特罗德：生存恐惧"><a href="#密特罗德：生存恐惧" class="headerlink"
+                                        title="密特罗德：生存恐惧"></a>密特罗德：生存恐惧</h4>
+                                <p>类型：动作冒险、平台游戏</p>
+                                <p>开发商：MercurySteam、任天堂EPD</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>38分钟</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/New-Horizons.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="集合啦动物森友会"><a href="#集合啦动物森友会" class="headerlink" title="集合啦动物森友会"></a>集合啦动物森友会
+                                </h4>
+                                <p>类型：生活模拟</p>
+                                <p>开发商：任天堂企划制作本部</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>20小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/NieR-Automata.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="尼尔：机械纪元"><a href="#尼尔：机械纪元" class="headerlink" title="尼尔：机械纪元"></a>尼尔：机械纪元</h4>
+                                <p>类型：动作角色扮演</p>
+                                <p>开发商：PlatinumGames</p>
+                                <p>游玩平台：PlayStation 4、Windows、Xbox One</p>
+                            </div>
+                            <div class="playtime">
+                                <p>1小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Yoshi’s-Crafted-World.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="耀西的手工世界"><a href="#耀西的手工世界" class="headerlink" title="耀西的手工世界"></a>耀西的手工世界</h4>
+                                <p>类型：2D平台动作</p>
+                                <p>开发商：Good-Feel</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>27分钟</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/sifu.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="sifu"><a href="#sifu" class="headerlink" title="sifu"></a>sifu</h4>
+                                <p>类型：动作、格斗</p>
+                                <p>开发商：Sloclap</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>52分钟</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Luigi's-Mansion3.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="路易吉洋馆3"><a href="#路易吉洋馆3" class="headerlink" title="路易吉洋馆3"></a>路易吉洋馆3</h4>
+                                <p>类型：动作冒险</p>
+                                <p>开发商：Next Level Games</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>1小时</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../image/Overcooked!-2.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="胡闹厨房2"><a href="#胡闹厨房2" class="headerlink" title="胡闹厨房2"></a>胡闹厨房2</h4>
+                                <p>类型：模拟、合作</p>
+                                <p>开发商：Ghost Town Games</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>5小时</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
     </div>
-    
-    <script>
-        document.ready(
-            function () {
-                tocbot.init({
-                    tocSelector: '.tocbot-list',
-                    contentSelector: '.post-content',
-                    headingSelector: 'h1, h2, h3, h4, h5',
-                    collapseDepth: 1,
-                    orderedList: false,
-                    scrollSmooth: true,
-                })
-            }
-        )
-    
-        function expand_toc() {
-            var b = document.querySelector(".tocbot-toc-expand");
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 6,
-                orderedList: false,
-                scrollSmooth: true,
-            });
-            b.setAttribute("onclick", "collapse_toc()");
-            b.innerHTML = "Collapse all"
-        }
-    
-        function collapse_toc() {
-            var b = document.querySelector(".tocbot-toc-expand");
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            });
-            b.setAttribute("onclick", "expand_toc()");
-            b.innerHTML = "Expand all"
-        }
-    
-        function go_top() {
-            window.scrollTo(0, 0);
-        }
-    
-        function go_bottom() {
-            window.scrollTo(0, document.body.scrollHeight);
-        }
-    
-    </script>
-        
-    <article class="post-wrap page">
-        <h2 class="post-title">My Games</h2>
-        <div class="post-content">
-            <h3 id="塞尔达传说"><a href="#塞尔达传说" class="headerlink" title="塞尔达传说"></a>塞尔达传说</h3>
-            <div class="item">
-                <img src="../image/Breath-of-the-Wild.png" alt="">
-                <div class="item-content">
-                    <p class="bold-text">塞尔达传说·旷野之息</p>
-                    <p>类型：动作冒险</p>
-                    <p>开发商：任天堂</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>96小时</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="../image/SkywardSword.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">塞尔达传说·御天之剑HD </p>
-                    <p>类型：动作冒险</p>
-                    <p>开发商：任天堂</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>53小时</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="../image/Link's-Awakening.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">塞尔达传说·织梦岛</p>
-                    <p>类型：动作冒险</p>
-                    <p>开发商：任天堂</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>19小时</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../image/Tears-of-the-Kingdom.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">塞尔达传说·王国之泪</p>
-                    <p>类型：动作冒险</p>
-                    <p>开发商：任天堂</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>7.5小时</p>
-                </div>
-            </div>
-
-
-            <h3 id="怪物猎人"><a href="#怪物猎人" class="headerlink" title="怪物猎人"></a>怪物猎人</h3></div>
-            <div class="item">
-                <img src="../image/Breath-of-the-Wild.png" alt="">
-                <div class="item-content">
-                    <p class="bold-text">怪物猎人·世界</p>
-                    <p>类型：动作角色扮演</p>
-                    <p>开发商：卡普空</p>
-                    <p>游玩平台：Windows</p>    
-                </div>
-                <div class="playtime">
-                    <p>319小时</p>
-                </div>
-            </div>
-        
-            <div class="item">
-                <img src="../image/rise.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">怪物猎人·崛起</p>
-                    <p>类型：动作角色扮演</p>
-                    <p>开发商：卡普空</p>
-                    <p>游玩平台：Windows</p>    
-                </div>
-                <div class="playtime">
-                    <p>230小时</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../image/gu.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">怪物猎人·GU</p>
-                    <p>类型：动作角色扮演</p>
-                    <p>开发商：卡普空</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>28分钟</p>
-                </div>
-            </div>
-
-            <h3 id="马力欧"><a href="#马力欧" class="headerlink" title="马力欧"></a>马力欧</h3>
-            <div class="item">
-                <img src="../image/mario-u.png" alt="">
-                <div class="item-content">
-                    <p class="bold-text">新超级马力欧兄弟U·豪华版</p>
-                    <p>类型：平台动作</p>
-                    <p>开发商：任天堂</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>15小时</p>
-                </div>
-            </div>
-        
-            <div class="item">
-                <img src="../image/mario-party.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">超级马力欧派对</p>
-                    <p>类型：排队、多人、家庭</p>
-                    <p>开发商：任天堂</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>5小时</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../image/mario-kart.png" alt="">
-                <div class="item-content">
-                    <p class="bold-text">马力欧卡丁车8·豪华版</p>
-                    <p>类型：赛车</p>
-                    <p>开发商：任天堂</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>12小时</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../image/mario-odyssey.png" alt="">
-                <div class="item-content">
-                    <p class="bold-text">超级马力欧·奥德赛</p>
-                    <p>类型：3D平台动作冒险</p>
-                    <p>开发商：</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>21小时</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="../image/mario-rpg.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">超级马力欧RPG</p>
-                    <p>类型：动作RPG</p>
-                    <p>开发商：任天堂情报开发部、史克威尔开发第5部</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>38分钟</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="../image/mario-paper.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">纸片马力欧·折纸国王</p>
-                    <p>类型：动作冒险</p>
-                    <p>开发商：Intelligent Systems</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>45分钟</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="../image/mario-rabbids.jpg" alt="">
-                <div class="item-content">
-                    <p class="bold-text">马力欧疯狂兔子·王国之战</p>
-                    <p>类型：回合制策略</p>
-                    <p>开发商：育碧</p>
-                    <p>游玩平台：Nintendo Switch</p>    
-                </div>
-                <div class="playtime">
-                    <p>33分钟</p>
-                </div>
-            </div>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            <span>© nmk | Powered by <a href="https://hexo.io" target="_blank">Hexo</a></span>
         </div>
-    </article>
-</div>
-</div>
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© nmk | Powered by <a href="https://hexo.io" target="_blank">Hexo</a></span>
-	</div>
-</footer>
+    </footer>
 
     </div>
-</body>
+    </body>
+
 </html>

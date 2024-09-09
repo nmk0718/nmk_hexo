@@ -2,3 +2,56 @@
 // Custom style
 // ==============================
 //  Also You can override the variables in variable.styl to customize the style
+
+.products
+  display flex
+  overflow-x auto
+
+.product
+  border-radius 15px
+  box-shadow 0 2px 4px rgba(0, 0, 0, 0.1)
+  margin-right 20px
+  margin-bottom 10px
+  text-align center
+
+  img
+    height 200px
+
+.computer-product
+  border-radius 15px
+  box-shadow 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.computer-product-content
+  display flex
+
+.computer-product-info
+  flex 1
+  text-align center
+
+  img
+    width 80%
+
+.computer-item-content
+  flex 1
+  text-align left
+
+@media only screen and (max-width: 479px)
+  body
+    line-height 1em
+
+.item
+  display flex
+  align-items center
+  border-top 0.5px solid #ccc
+  padding 20px 0
+
+  img
+    max-width 250px
+    margin-right 20px
+
+.item-content
+  flex 1
+  line-height 1em
+
+.playtime
+  padding 10px
