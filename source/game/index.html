@@ -36,8 +36,15 @@
 
     <script src="/js/tocbot.min.js"></script>
 
-
-
+    <style>
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+    </style>
 
 </head>
 
@@ -185,7 +192,7 @@
                     <div class="post-content">
                         <h3 id="塞尔达传说"><a href="#塞尔达传说" class="headerlink" title="塞尔达传说"></a>塞尔达传说</h3>
                         <div class="item">
-                            <img src="../image/Breath-of-the-Wild.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Breath-of-the-Wild.png" alt="">
                             <div class="item-content">
                                 <h4 id="塞尔达传说·旷野之息"><a href="#塞尔达传说·旷野之息" class="headerlink"
                                         title="塞尔达传说·旷野之息"></a>塞尔达传说·旷野之息</h4>
@@ -198,12 +205,12 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/SkywardSword.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/SkywardSword.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="塞尔达传说·御天之剑HD"><a href="#塞尔达传说·御天之剑HD" class="headerlink"
                                         title="塞尔达传说·御天之剑HD"></a>塞尔达传说·御天之剑HD</h4>
                                 <p>类型：动作冒险</p>
-                                <p>开��商：任天堂</p>
+                                <p>开发商：任天堂</p>
                                 <p>游玩平台：Nintendo Switch</p>
                             </div>
                             <div class="playtime">
@@ -211,7 +218,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Link's-Awakening.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Link's-Awakening.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="塞尔达传说·织梦岛"><a href="#塞尔达传说·织梦岛" class="headerlink"
                                         title="塞尔达传说·织梦岛"></a>塞尔达传说·织梦岛</h4>
@@ -224,7 +231,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Tears-of-the-Kingdom.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Tears-of-the-Kingdom.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="塞尔达传说·王国之泪"><a href="#塞尔达传说·王国之泪" class="headerlink"
                                         title="塞尔达传说·王国之泪"></a>塞尔达传说·王国之泪</h4>
@@ -237,10 +244,24 @@
                             </div>
                         </div>
 
+                        <div class="item">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Echoes-of-Wisdom.jpg" alt="">
+                            <div class="item-content">
+                                <h4 id="塞尔达传说·智慧的再现"><a href="#塞尔达传说·智慧的再现" class="headerlink"
+                                        title="塞尔达传说·智慧的再现"></a>塞尔达传说·智慧的再现</h4>
+                                <p>类型：动作冒险</p>
+                                <p>开发商：任天堂</p>
+                                <p>游玩平台：Nintendo Switch</p>
+                            </div>
+                            <div class="playtime">
+                                <p>5小时</p>
+                            </div>
+                        </div>
+
 
                         <h3 id="怪物猎人"><a href="#怪物猎人" class="headerlink" title="怪物猎人"></a>怪物猎人</h3>
                         <div class="item">
-                            <img src="../image/world.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/world.png" alt="">
                             <div class="item-content">
                                 <h4 id="怪物猎人·世界"><a href="#怪物猎人·世界" class="headerlink" title="怪物猎人·世界"></a>怪物猎人·世界</h4>
                                 <p>类型：动作角色扮演</p>
@@ -253,7 +274,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/rise.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/rise.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="怪物猎人·崛起"><a href="#怪物猎人·崛起" class="headerlink" title="怪物猎人·崛起"></a>怪物猎人·崛起</h4>
                                 <p>类型：动作角色扮演</p>
@@ -266,7 +287,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/gu.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/gu.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="怪物猎人·GU"><a href="#怪物猎人·GU" class="headerlink" title="怪物猎人·GU"></a>怪物猎人·GU</h4>
                                 <p>类型：动作角色扮演</p>
@@ -281,7 +302,7 @@
 
                         <h3 id="马力欧"><a href="#马力欧" class="headerlink" title="马力欧"></a>马力欧</h3>
                         <div class="item">
-                            <img src="../image/mario-u.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-u.png" alt="">
                             <div class="item-content">
                                 <h4 id="新超级马力欧兄弟U·豪华版"><a href="#新超级马力欧兄弟U·豪华版" class="headerlink"
                                         title="新超级马力欧兄弟U·豪华版"></a>新超级马力欧兄弟U·豪华版</h4>
@@ -295,7 +316,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/mario-party.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-party.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="超级马力欧派对"><a href="#超级马力欧派对" class="headerlink" title="超级马力欧派对"></a>超级马力欧派对</h4>
                                 <p>类型：聚会、多人</p>
@@ -308,7 +329,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/mario-kart.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-kart.png" alt="">
                             <div class="item-content">
                                 <h4 id="马力欧卡丁车8·豪华版"><a href="#马力欧卡丁车8·豪华版" class="headerlink"
                                         title="马力欧卡丁车8·豪华版"></a>马力欧卡丁车8·豪华版</h4>
@@ -322,7 +343,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/mario-odyssey.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-odyssey.png" alt="">
                             <div class="item-content">
                                 <h4 id="超级马力欧·奥德赛"><a href="#超级马力欧·奥德赛" class="headerlink"
                                         title="超级马力欧·奥德赛"></a>超级马力欧·奥德赛</h4>
@@ -336,7 +357,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/mario-rpg.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-rpg.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="超级马力欧RPG"><a href="#超级马力欧RPG" class="headerlink" title="超级马力欧RPG"></a>超级马力欧RPG
                                 </h4>
@@ -349,7 +370,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/mario-paper.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-paper.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="纸片马力欧·折纸国王"><a href="#纸片马力欧·折纸国王" class="headerlink"
                                         title="纸片马力欧·折纸国王"></a>纸片马力欧·折纸国王</h4>
@@ -362,7 +383,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/mario-rabbids.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-rabbids.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="马力欧疯狂兔子·王国之战"><a href="#马力欧疯狂兔子·王国之战" class="headerlink"
                                         title="马力欧疯狂兔子·王国之战"></a>马力欧疯狂兔子·王国之战</h4>
@@ -375,7 +396,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/mario-wonder.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-wonder.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="超级马力欧兄弟·惊奇"><a href="#超级马力欧兄弟·惊奇" class="headerlink"
                                         title="超级马力欧兄弟·惊奇"></a>超级马力欧兄弟·惊奇</h4>
@@ -390,7 +411,7 @@
 
                         <h3 id="星之卡比"><a href="#星之卡比" class="headerlink" title="星之卡比"></a>星之卡比</h3>
                         <div class="item">
-                            <img src="../image/Return-to-Dream-Land-DELUXE.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Return-to-Dream-Land-DELUXE.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="星之卡比Wii·豪华版"><a href="#星之卡比Wii·豪华版" class="headerlink"
                                         title="星之卡比Wii·豪华版"></a>星之卡比Wii·豪华版</h4>
@@ -403,7 +424,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Forgotten-Land.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Forgotten-Land.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="星之卡比·探索发现"><a href="#星之卡比·探索发现" class="headerlink"
                                         title="星之卡比·探索发现"></a>星之卡比·探索发现</h4>
@@ -416,7 +437,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Star-Allies.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Star-Allies.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="星之卡比·新星同盟"><a href="#星之卡比·新星同盟" class="headerlink"
                                         title="星之卡比·新星同盟"></a>星之卡比·新星同盟</h4>
@@ -432,7 +453,7 @@
 
                         <h3 id="瓦力欧"><a href="#瓦力欧" class="headerlink" title="瓦力欧"></a>瓦力欧</h3>
                         <div class="item">
-                            <img src="../image/Move-It.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Move-It.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="超级舞动·瓦力欧制造"><a href="#超级舞动·瓦力欧制造" class="headerlink"
                                         title="超级舞动·瓦力欧制造"></a>超级舞动·瓦力欧制造</h4>
@@ -446,7 +467,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/Get-it-Together.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Get-it-Together.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="分享同乐·瓦力欧制造"><a href="#分享同乐·瓦力欧制造" class="headerlink"
                                         title="分享同乐·瓦力欧制造"></a>分享同乐·瓦力欧制造</h4>
@@ -461,7 +482,7 @@
 
                         <h3 id="体感游戏"><a href="#体感游戏" class="headerlink" title="体感游戏"></a>体感游戏</h3>
                         <div class="item">
-                            <img src="../image/Ring-Fit-Adventure.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Ring-Fit-Adventure.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="健身环大冒险"><a href="#健身环大冒险" class="headerlink" title="健身环大冒险"></a>健身环大冒险</h4>
                                 <p>类型：健身、角色扮演</p>
@@ -474,7 +495,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/just-dance2019.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/just-dance2019.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="舞力全开2019"><a href="#舞力全开2019" class="headerlink" title="舞力全开2019"></a>舞力全开2019
                                 </h4>
@@ -488,7 +509,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/Fitness-Boxing2.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Fitness-Boxing2.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="健身拳击2"><a href="#健身拳击2" class="headerlink" title="健身拳击2"></a>健身拳击2</h4>
                                 <p>类型：体育、健身</p>
@@ -501,7 +522,7 @@
                         </div>
 
                         <div class="item">
-                            <img src="../image/switch-sports.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/switch-sports.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="Nintendo-switch-sports"><a href="#Nintendo-switch-sports" class="headerlink"
                                         title="Nintendo switch sports"></a>Nintendo switch sports</h4>
@@ -516,7 +537,7 @@
 
                         <h3 id="其他游戏"><a href="#其他游戏" class="headerlink" title="其他游戏"></a>其他游戏</h3>
                         <div class="item">
-                            <img src="../image/mario-u.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-u.png" alt="">
                             <div class="item-content">
                                 <h4 id="黑神话·悟空"><a href="#黑神话·悟空" class="headerlink" title="黑神话·悟空"></a>黑神话·悟空</h4>
                                 <p>类型：动作角色扮演</p>
@@ -528,7 +549,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/mario-u.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-u.png" alt="">
                             <div class="item-content">
                                 <h4 id="warframe"><a href="#warframe" class="headerlink" title="warframe"></a>warframe
                                 </h4>
@@ -541,7 +562,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/mario-u.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-u.png" alt="">
                             <div class="item-content">
                                 <h4 id="遗迹灰烬重生"><a href="#遗迹灰烬重生" class="headerlink" title="遗迹灰烬重生"></a>遗迹灰烬重生</h4>
                                 <p>类型：第三人称射击、动作角色扮演</p>
@@ -553,7 +574,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/mario-u.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-u.png" alt="">
                             <div class="item-content">
                                 <h4 id="Dungeonborne"><a href="#Dungeonborne" class="headerlink"
                                         title="Dungeonborne"></a>Dungeonborne</h4>
@@ -566,7 +587,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/mario-u.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/mario-u.png" alt="">
                             <div class="item-content">
                                 <h4 id="艾尔登法环"><a href="#艾尔登法环" class="headerlink" title="艾尔登法环"></a>艾尔登法环</h4>
                                 <p>类型：动作角色扮演</p>
@@ -578,7 +599,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Witcher.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Witcher.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="巫师3狂猎"><a href="#巫师3狂猎" class="headerlink" title="巫师3狂猎"></a>巫师3狂猎</h4>
                                 <p>类型：动作角色扮演</p>
@@ -590,7 +611,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Riders-Republic.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Riders-Republic.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="极限国度"><a href="#极限国度" class="headerlink" title="极限国度"></a>极限国度</h4>
                                 <p>类型：体育、极限运动</p>
@@ -602,7 +623,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/hades.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/hades.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="哈迪斯"><a href="#哈迪斯" class="headerlink" title="哈迪斯"></a>哈迪斯</h4>
                                 <p>类型：动作角色扮演、Roguelike</p>
@@ -614,7 +635,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Metroid-Dread.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Metroid-Dread.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="密特罗德：生存恐惧"><a href="#密特罗德：生存恐惧" class="headerlink"
                                         title="密特罗德：生存恐惧"></a>密特罗德：生存恐惧</h4>
@@ -627,7 +648,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/New-Horizons.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/New-Horizons.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="集合啦动物森友会"><a href="#集合啦动物森友会" class="headerlink" title="集合啦动物森友会"></a>集合啦动物森友会
                                 </h4>
@@ -640,7 +661,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/NieR-Automata.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/NieR-Automata.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="尼尔：机械纪元"><a href="#尼尔：机械纪元" class="headerlink" title="尼尔：机械纪元"></a>尼尔：机械纪元</h4>
                                 <p>类型：动作角色扮演</p>
@@ -652,7 +673,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Yoshi’s-Crafted-World.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Yoshi's-Crafted-World.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="耀西的手工世界"><a href="#耀西的手工世界" class="headerlink" title="耀西的手工世界"></a>耀西的手工世界</h4>
                                 <p>类型：2D平台动作</p>
@@ -664,7 +685,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/sifu.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/sifu.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="sifu"><a href="#sifu" class="headerlink" title="sifu"></a>sifu</h4>
                                 <p>类型：动作、格斗</p>
@@ -676,7 +697,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Luigi's-Mansion3.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Luigi's-Mansion3.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="路易吉洋馆3"><a href="#路易吉洋馆3" class="headerlink" title="路易吉洋馆3"></a>路易吉洋馆3</h4>
                                 <p>类型：动作冒险</p>
@@ -688,7 +709,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../image/Overcooked!-2.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Overcooked!-2.jpg" alt="">
                             <div class="item-content">
                                 <h4 id="胡闹厨房2"><a href="#胡闹厨房2" class="headerlink" title="胡闹厨房2"></a>胡闹厨房2</h4>
                                 <p>类型：模拟、合作</p>
@@ -711,6 +732,61 @@
     </footer>
 
     </div>
-    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
 
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.add("loaded");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // 回退方案，适用于不支持IntersectionObserver的浏览器
+                let active = false;
+
+                const lazyLoad = function() {
+                    if (active === false) {
+                        active = true;
+
+                        setTimeout(function() {
+                            lazyImages.forEach(function(lazyImage) {
+                                if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                                    lazyImage.src = lazyImage.dataset.src;
+                                    lazyImage.classList.add("loaded");
+
+                                    lazyImages = lazyImages.filter(function(image) {
+                                        return image !== lazyImage;
+                                    });
+
+                                    if (lazyImages.length === 0) {
+                                        document.removeEventListener("scroll", lazyLoad);
+                                        window.removeEventListener("resize", lazyLoad);
+                                        window.removeEventListener("orientationchange", lazyLoad);
+                                    }
+                                }
+                            });
+
+                            active = false;
+                        }, 200);
+                    }
+                };
+
+                document.addEventListener("scroll", lazyLoad);
+                window.addEventListener("resize", lazyLoad);
+                window.addEventListener("orientationchange", lazyLoad);
+            }
+        });
+    </script>
+</body>
 </html>

@@ -29,15 +29,42 @@
     <!-- scripts list from _config.yml -->
 
     <script src="/js/script.js"></script>
-
     <script src="/js/tocbot.min.js"></script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
 
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        let lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.add("loaded");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
 
-
-
-
-
-
+            lazyImages.forEach(function(lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // 对于不支持IntersectionObserver的浏览器，可以使用传统的滚动事件监听方法
+        }
+    });
+    </script>
+    
+    <style>
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,19 +126,6 @@
             </nav>
 
         </header>
-        <script>
-            var mobileBtn = function f() {
-                var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-                var mobileMenu = document.getElementById("mobile-menu");
-                if (toggleMenu.classList.contains("active")) {
-                    toggleMenu.classList.remove("active")
-                    mobileMenu.classList.remove("active")
-                } else {
-                    toggleMenu.classList.add("active")
-                    mobileMenu.classList.add("active")
-                }
-            }
-        </script>
         <div class="main">
 
             <!--content-->
@@ -124,7 +138,7 @@
                         <div class="computer-product-content">
                             <div class="computer-product-info">
                                 <h3>MackBook Pro</h3>
-                                <img src="../image/MacBookPro.jpeg" alt="">
+                                <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/MacBookPro.jpeg" alt="">
                             </div>
                             <div class="computer-item-content">
                                 <p>版本: 13-inch, 2019</p>
@@ -141,7 +155,7 @@
                         <div class="computer-product-content">
                             <div class="computer-product-info">
                                 <h3>kk-DIY</h3>
-                                <img src="../image/jonsbo.jpg" alt="">
+                                <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/jonsbo.jpg" alt="">
                             </div>
                             <div class="computer-item-content">
                                 <!-- <p>显示器: 三星S27F359FHC</p> -->
@@ -162,26 +176,26 @@
                             <div class="product-info">
                                 <h3>iPhone 6s</h3>
                             </div>
-                            <img src="../image/iphone6s.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/iphone6s.jpg" alt="">
                         </div>
                         <div class="product">
                             <div class="product-info">
                                 <h3>Pixel 3XL</h3>
                             </div>
-                            <img src="../image/pixel3xl.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/pixel3xl.png" alt="">
 
                         </div>
                         <div class="product">
                             <div class="product-info">
                                 <h3>Pixel 4</h3>
                             </div>
-                            <img src="../image/pixel4.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/pixel4.png" alt="">
                         </div>
                         <div class="product">
                             <div class="product-info">
                                 <h3>SAMSUNG Galaxy S23</h3>
                             </div>
-                            <img src="../image/SAMSUNG-GalaxyS23.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/SAMSUNG-GalaxyS23.png" alt="">
                         </div>
                     </div>
                     <h2>鼠标</h2>
@@ -190,13 +204,13 @@
                             <div class="product-info">
                                 <h3>富勒 X100</h3>
                             </div>
-                            <img src="../image/Fuhlen.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Fuhlen.jpg" alt="">
                         </div>
                         <div class="product">
                             <div class="product-info">
                                 <h3>罗技 G304</h3>
                             </div>
-                            <img src="../image/g304.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/g304.jpg" alt="">
                         </div>
                     </div>
 
@@ -209,7 +223,7 @@
                             <img style="display: block;
                             flex: 1;
                             border-bottom-left-radius: 15px;
-                            border-bottom-right-radius: 15px;" src="../image/cherry.png" alt="">
+                            border-bottom-right-radius: 15px;" class="lazy-load" src="../image/placeholder.jpg" data-src="../image/cherry.png" alt="">
                         </div>
                         <div class="product">
                             <div class="product-info">
@@ -219,7 +233,7 @@
                             flex: 1;
                             width: 350px;
                             border-bottom-left-radius: 15px;
-                            border-bottom-right-radius: 15px;" src="../image/IQUNIX-M80.jpg" alt="">
+                            border-bottom-right-radius: 15px;" class="lazy-load" src="../image/placeholder.jpg" data-src="../image/IQUNIX-M80.jpg" alt="">
                         </div>
                     </div>
                     <h2>耳机</h2>
@@ -228,7 +242,7 @@
                             <div class="product-info">
                                 <h3>Pixel Buds A-Series</h3>
                             </div>
-                            <img src="../image/Pixel-Buds-A-Series.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Pixel-Buds-A-Series.jpg" alt="">
                         </div>
                     </div>
                     <h2>主机</h2>
@@ -237,7 +251,7 @@
                             <div class="product-info">
                                 <h3>Nintendo Switch</h3>
                             </div>
-                            <img src="../image/switch.png" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/switch.png" alt="">
                         </div>
                     </div>
                     <h2>手柄</h2>
@@ -246,7 +260,7 @@
                             <div class="product-info">
                                 <h3>Switch Pro</h3>
                             </div>
-                            <img src="../image/switch-pro.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/switch-pro.jpg" alt="">
                         </div>
                     </div>
                     <h2>相机</h2>
@@ -255,7 +269,7 @@
                             <div class="product-info">
                                 <h3>Instax mini8</h3>
                             </div>
-                            <img src="../image/instax-mini8.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/instax-mini8.jpg" alt="">
                         </div>
                     </div>
                     <h2>Nas</h2>
@@ -264,7 +278,7 @@
                             <div class="product-info">
                                 <h3>Synology DS220j</h3>
                             </div>
-                            <img src="../image/Synology-DS220j.jpg" alt="">
+                            <img class="lazy-load" src="../image/placeholder.jpg" data-src="../image/Synology-DS220j.jpg" alt="">
                         </div>
                     </div>
                 </article>
