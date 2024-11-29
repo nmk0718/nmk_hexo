@@ -1,11 +1,10 @@
 # Header
-navname: nimingkun's Blog
+navname: kk's Blog
 
 # navigatior items
 nav:
   
   Posts: /archives
-#  Category: /category
   App: /app
   Map: /map
   Game: /game
@@ -17,7 +16,7 @@ nav:
 favicon: /favicon.ico
 
 # Profile
-nickname: nimingkun
+nickname: kk
 
 ### this variable is MarkDown form.
 description: wish you a smile every day
