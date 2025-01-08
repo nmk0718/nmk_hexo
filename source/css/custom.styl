@@ -1,4 +1,455 @@
 // ==============================
 // Custom style
 // ==============================
-//  Also You can override the variables in variable.styl to customize the style
+
+/* media 页面样式 */
+.products-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* 支持iOS滑动 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.products-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.products {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 0;
+    gap: 15px;
+}
+
+.product {
+    flex: 0 0 auto;
+    width: 280px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px 0;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+/* 滑动提示样式 */
+.scroll-hint {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.9em;
+    margin: 5px 0;
+    opacity: 0.7;
+}
+
+.computer-product-content {
+    display: flex;
+    padding: 15px 0;
+}
+
+.computer-product-info {
+    flex: 1;
+    text-align: center;
+    
+    img {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+.computer-item-content {
+    flex: 1;
+    text-align: left;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    p {
+        margin: 8px 0;
+        line-height: 1.6;
+    }
+}
+
+/* media移动端适配 */
+@media screen and (max-width: 768px) {
+    .products-container {
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+    
+    .product {
+        width: 220px;
+    }
+    
+    .computer-product-content {
+        flex-direction: column;
+        align-items: center; /* 整体内容居中 */
+    }
+    
+    .computer-product-info {
+        margin-bottom: 15px;
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    .computer-item-content {
+        padding: 0;
+        text-align: left; /* 文字左对齐 */
+        width: 80%; /* 控制内容区域宽度 */
+        max-width: 300px; /* 限制最大宽度 */
+        
+        p {
+            width: 100%;
+            text-align: left; /* 段落文字左对齐 */
+        }
+    }
+}
+
+/* map页面样式 */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 300px); /* 减去header和footer的高度 */
+    margin: 0;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .map-container {
+        min-height: calc(100vh - 250px);
+    }
+    
+    .map-container iframe {
+        height: 400px;
+    }
+}
+/* game页面样式 */
+.game-item
+  display flex
+  align-items center
+  border-top 0.5px solid #ccc
+  padding 20px 0
+
+  img
+    width 250px
+    margin-right 20px
+
+.game-item-content-wrapper
+  display flex
+  flex 1
+  align-items center
+
+.game-item-content
+  flex 1
+  line-height 1.5em
+  
+  h4
+    margin 0 0 10px 0
+    font-size 1.2em
+
+
+/* game页面移动端适配 */
+@media screen and (max-width: 768px)
+  .game-item
+    flex-direction column
+    padding 15px 0
+    
+    img
+      width 100%
+      margin-bottom 15px
+  
+  .game-item-content-wrapper
+    width 100%
+    display flex
+    justify-content space-between
+    align-items flex-start
+  
+  .game-item-content
+    
+    h4
+      font-size 1.1em
+      margin-bottom 5px
+    
+    p
+      font-size 0.9em
+      line-height 1.4
+  
+  .game-playtime
+    p
+      font-size 0.9em
+
+
+/* app页面样式 */
+.app-list-c {
+        width: 100%;
+        max-width: 780px;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+
+    .app-title {
+        /*font-size: 20px;*/
+        margin-bottom: 30px;
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    .app-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 64px 16px 0;
+        cursor: pointer;
+    }
+
+    .app img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 16px;
+    }
+
+/* App页面通用样式 */
+.post-wrap.page {
+  /* App页面样式作用域 */
+  .app-header,
+  .header {
+    display: flex
+    justify-content: space-between
+    background: transparent
+    width: 100%
+    margin: 0 auto
+
+    .app-icon,
+    .icon {
+      img {
+        width: 90px
+        height: 90px
+        border-radius: 5px
+      }
+    }
+
+    .app-title-content,
+    .title-c {
+      flex: 1
+      display: flex
+      flex-direction: column
+      margin: 0 0 0 20px
+
+      .app-name {
+        color: #333
+        line-height: 30px
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        font-size: 22px
+        font-weight: normal
+        margin: 0
+      }
+
+      .app-size,
+      .app-package {
+        font-size: 14px
+        color: #999
+        line-height: 20px
+        margin: 3px 0 0 !important
+      }
+    }
+
+    .app-qrcode,
+    .qrcode {
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      img {
+        width: 82px
+        height: 82px
+      }
+
+      span {
+        font-size: 12px
+        color: #999
+      }
+    }
+  }
+
+  .download-btn {
+    padding: 0 6px
+    display: inline-block
+    width: 120px
+    height: 34px
+    border-radius: 5px
+    font-size: 14px
+    color: white
+    background-color: #4caf50
+    margin-top: 6px
+    border: none
+    cursor: pointer
+  }
+
+  .app-screenshots,
+  .screen-shot {
+    width: 100%
+    padding: 20px
+    background: transparent
+    margin-top: 16px
+
+    .sub-title {
+      font-size: 18px
+      margin-bottom: 10px
+    }
+
+    .app-image {
+      width: 100%
+      display: flex
+      flex-wrap: nowrap
+      overflow-x: auto
+      padding: 5px
+      margin-bottom: 16px
+
+      img {
+        width: 230px
+        height: auto
+        margin-right: 20px
+        box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, .1)
+        cursor: pointer
+        border-radius: 20px
+      }
+    }
+
+    .description {
+      font-size: 14px
+      color: #666
+      margin-bottom: 16px
+
+      p {
+        margin-bottom: 16px
+      }
+    }
+  }
+}
+
+/* 图片预览样式 */
+.preview
+  position fixed
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  background rgba(0, 0, 0, 0.9)
+  display none
+  justify-content center
+  align-items center
+  z-index 999
+  
+  .preview-img
+    max-height 90vh
+    max-width 90vw
+    object-fit contain
+  
+  .prev-ic,
+  .next-ic
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    width 40px
+    height 40px
+    cursor pointer
+    z-index 1000
+    display flex
+    justify-content center
+    align-items center
+    
+    img
+      width 24px
+      height 24px
+      opacity 0.6
+      transition opacity 0.3s
+      &:hover
+        opacity 1
+  
+  .prev-ic
+    left 20px
+  
+  .next-ic
+    right 20px
+
+/* 暗色主题适配 */
+.dark-theme {
+  .post-wrap.page {
+    .app-name {
+      color: #a9a9b3
+    }
+
+    .description {
+      color: #a9a9b3
+    }
+  }
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px)
+  .post-wrap.page
+    .app-header,
+    .header
+      flex-direction column
+      align-items center
+      padding-top 0   // 移除顶部内边距
+
+      .app-icon,
+      .icon
+        width 120px
+        height 120px
+        margin 30px 0 0px 0 // 添加上下外边距
+        
+        img
+          width 100%
+          height 100%
+          object-fit contain
+          border-radius 5px
+
+      .app-title-content,
+      .title-c
+        margin 15px 0
+        text-align center
+        align-items center
+/*代码复制样式*/
+.copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(45, 150, 189, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 6px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: all 0.2s;
+    opacity: 0.8;
+}
+
+.copy-button:hover {
+    opacity: 1;
+    background-color: rgba(45, 150, 189, 1);
+}
